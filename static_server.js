@@ -11,7 +11,7 @@ http.createServer(function (request, response) {
         // Send error response
         if (err) {
             response.writeHead(404, {'Content-Type' : 'text/html'});
-            return res.end('404 Not Found');
+            return response.end('404 Not Found');
         }
 
         //Send response with file static content
