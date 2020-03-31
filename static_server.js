@@ -10,13 +10,13 @@ http.createServer(function (request, response) {
     fs.readFile(filename, function (err, data) {
         // Send error response
         if (err) {
-            res.writeHead(404, {'Content-Type' : 'text/html'});
+            response.writeHead(404, {'Content-Type' : 'text/html'});
             return res.end('404 Not Found');
         }
 
         //Send response with file static content
-        res.writeHead(200, {'Content-Tyoe' : 'text/htnl'});
-        res.send(data);
+        response.writeHead(200, {'Content-Tyoe' : 'text/htnl'});
+        response.send(data);
         return res.end();
     });
 }).listen(8000);
