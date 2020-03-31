@@ -1,6 +1,6 @@
 var http = require('http');
 var url = require('url');
-var fs = rewuire('fs');
+var fs = require('fs');
 
 http.createServer(function (request, response) {
     var q = url.parse(request.url, true);
