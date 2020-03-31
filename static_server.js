@@ -16,7 +16,7 @@ http.createServer(function (request, response) {
 
         //Send response with file static content
         response.writeHead(200, {'Content-Tyoe' : 'text/htnl'});
-        response.send(data);
+        response.write(data);
         return response.end();
     });
 }).listen(8000);
